@@ -7,5 +7,7 @@ lazy val scalaDojo = (project in file("."))
 
 scalacOptions += "-target:jvm-1.8"
 
-val ScalaTest = "org.scalatest" % "scalatest_2.11" % "2.2.6"
-libraryDependencies += ScalaTest % "test"
+libraryDependencies ++= Seq(
+  "org.scalatest" %% "scalatest" % "2.2.6" % "test",
+  "org.scalacheck" %% "scalacheck" % "1.12.5" % "test"
+)
