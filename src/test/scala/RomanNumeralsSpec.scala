@@ -96,7 +96,6 @@ class RomanNumeralsSpec extends PropSpec with PropertyChecks with Matchers {
     forAll(validInputs) { i =>
       if((i % 1000 /100) == 9 ){
         arabicToRoman(i) should  include regex "CM"
-        println(arabicToRoman(3999))
       }
     }
   }
